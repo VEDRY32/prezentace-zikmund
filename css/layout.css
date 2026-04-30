@@ -1,0 +1,123 @@
+/* === LAYOUT === */
+
+.presentation-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: var(--z-content);
+}
+
+.slide-inner {
+  width: 100%;
+  max-width: var(--content-max);
+  padding: var(--slide-padding);
+  position: relative;
+  z-index: var(--z-content);
+}
+
+/* Parallax layers */
+.slide-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.slide-layer--bg {
+  z-index: 1;
+}
+
+.slide-layer--mid {
+  z-index: 5;
+}
+
+.slide-layer--fg {
+  z-index: 15;
+}
+
+.slide-layer--content {
+  z-index: 20;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Two-column layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  width: 100%;
+}
+
+/* Image + text layout */
+.slide-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.slide-with-image.reverse {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.slide-with-image.reverse > * {
+  direction: ltr;
+}
+
+/* Parchment vignette overlay */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(26, 15, 8, 0.3) 100%
+  );
+}
+
+/* Decorative corners */
+.corner-ornament {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.corner-ornament--tl { top: var(--space-lg); left: var(--space-lg); }
+.corner-ornament--tr { top: var(--space-lg); right: var(--space-lg); transform: scaleX(-1); }
+.corner-ornament--bl { bottom: var(--space-lg); left: var(--space-lg); transform: scaleY(-1); }
+.corner-ornament--br { bottom: var(--space-lg); right: var(--space-lg); transform: scale(-1); }

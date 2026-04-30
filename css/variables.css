@@ -1,0 +1,63 @@
+:root {
+  /* Parchment backgrounds */
+  --parchment-light: #f4ead5;
+  --parchment-mid: #e8d8b0;
+  --parchment-dark: #d4c094;
+  --parchment-aged: #c9b582;
+
+  /* Ink / text */
+  --ink-black: #1a0f08;
+  --ink-brown: #3a2817;
+  --ink-faded: #5a3f2a;
+
+  /* Gold accents */
+  --gold-rich: #b8860b;
+  --gold-soft: #c9a14a;
+  --gold-pale: #e0c870;
+
+  /* Burgundy / blood (for Hussite sections) */
+  --burgundy-dark: #5c1f1f;
+  --burgundy-mid: #722f37;
+  --burgundy-soft: #8b3a40;
+
+  /* Shadows / depth */
+  --shadow-warm: rgba(58, 40, 23, 0.4);
+  --shadow-deep: rgba(26, 15, 8, 0.6);
+
+  /* Fonts */
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-quote: 'IM Fell English', Georgia, serif;
+
+  /* Font sizes */
+  --fs-display: clamp(3rem, 6vw, 5.5rem);
+  --fs-h1: clamp(2.2rem, 4.5vw, 4rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.8rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.6rem);
+  --fs-body: clamp(1.1rem, 1.5vw, 1.4rem);
+  --fs-caption: clamp(0.9rem, 1.2vw, 1.1rem);
+  --fs-quote: clamp(1.2rem, 1.7vw, 1.6rem);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --content-max: 1200px;
+  --slide-padding: clamp(2rem, 5vw, 6rem);
+  --transition-duration: 1.5s;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-content: 10;
+  --z-overlay: 100;
+  --z-nav: 200;
+  --z-progress: 300;
+  --z-map: 400;
+  --z-loading: 500;
+  --z-cursor: 999;
+}

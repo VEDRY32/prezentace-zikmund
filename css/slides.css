@@ -1,0 +1,304 @@
+/* === SLIDE-SPECIFIC STYLES === */
+
+/* Slide 1 - Title (parchment/light) */
+#slide-1 {
+  background:
+    radial-gradient(ellipse at center,
+      #faf5eb 0%,
+      var(--parchment-light) 30%,
+      var(--parchment-mid) 60%,
+      var(--parchment-aged) 85%,
+      var(--parchment-dark) 100%
+    );
+  text-align: center;
+}
+
+#slide-1 .slide-inner {
+  text-align: center;
+}
+
+#slide-1 .title-main {
+  font-size: var(--fs-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-black);
+  text-shadow:
+    0 2px 4px rgba(184, 134, 11, 0.3),
+    0 0 30px rgba(244, 234, 213, 0.8);
+  margin-bottom: var(--space-md);
+}
+
+#slide-1 .title-sub {
+  font-size: var(--fs-h2);
+  color: var(--ink-brown);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xl);
+}
+
+#slide-1 .title-facts {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+#slide-1 .title-fact {
+  font-family: var(--font-heading);
+  font-size: var(--fs-caption);
+  color: var(--gold-rich);
+  letter-spacing: 0.05em;
+  border: 1px solid var(--gold-rich);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 2px;
+  background: rgba(244, 234, 213, 0.5);
+}
+
+#slide-1 .title-quote {
+  margin-top: var(--space-xl);
+  background: rgba(244, 234, 213, 0.4);
+  color: var(--ink-faded);
+}
+
+#slide-1 .coat-of-arms-wrapper {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 4px 12px rgba(92, 31, 31, 0.3));
+}
+
+#slide-1 .coat-of-arms-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle, rgba(255, 220, 100, 0.3) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#slide-1 .sigismund-portrait {
+  display: inline-block;
+  margin-top: var(--space-md);
+}
+
+#slide-1 .sigismund-portrait .illuminated-frame {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 6px;
+}
+
+#slide-1 .sigismund-portrait .illuminated-frame img {
+  border-radius: 50%;
+  border: 1px solid var(--ink-brown);
+}
+
+/* Illuminated frame for historical images */
+.illuminated-frame {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--gold-rich), var(--gold-soft), var(--gold-rich));
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 2px var(--gold-pale),
+    0 0 0 4px var(--ink-brown),
+    0 8px 30px var(--shadow-deep);
+  filter: sepia(0.15);
+}
+
+.illuminated-frame img,
+.illuminated-frame picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink-brown);
+}
+
+.illuminated-frame .frame-caption {
+  position: absolute;
+  bottom: -32px;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-faded);
+}
+
+.illuminated-frame::before,
+.illuminated-frame::after {
+  content: '';
+  position: absolute;
+  width: 24px; height: 24px;
+  background: url('assets/svg/divider.svg') center/contain no-repeat;
+  opacity: 0.6;
+}
+
+.illuminated-frame::before { top: -8px; left: -8px; }
+.illuminated-frame::after  { bottom: -8px; right: -8px; transform: rotate(180deg); }
+
+/* Slide 4 - Nikopol (dark, red tones) */
+#slide-4 {
+  background: linear-gradient(135deg,
+    var(--burgundy-dark) 0%,
+    #2a0a0a 50%,
+    var(--ink-black) 100%
+  );
+}
+
+#slide-4 .slide-title {
+  color: var(--burgundy-soft);
+}
+
+#slide-4 .slide-subtitle {
+  color: #c49a7a;
+}
+
+/* Slide 5 - Czech throne */
+#slide-5 {
+  background: linear-gradient(180deg,
+    var(--parchment-dark) 0%,
+    var(--parchment-mid) 50%,
+    var(--burgundy-dark) 100%
+  );
+}
+
+/* Slide 6 - Konstanz (fire tones) */
+#slide-6 {
+  background: linear-gradient(180deg,
+    #1a0800 0%,
+    var(--burgundy-dark) 40%,
+    #2a1505 100%
+  );
+}
+
+#slide-6 .fun-fact {
+  color: var(--parchment-mid);
+}
+
+#slide-6 .context-text {
+  color: rgba(228,216,176,0.7);
+}
+
+/* Slide 7 - Hussite wars */
+#slide-7 {
+  background: linear-gradient(135deg,
+    var(--burgundy-dark) 0%,
+    var(--parchment-dark) 50%,
+    var(--burgundy-mid) 100%
+  );
+}
+
+/* Slide 8 - Coronation */
+#slide-8 {
+  background: linear-gradient(180deg,
+    rgba(184, 134, 11, 0.15) 0%,
+    var(--parchment-light) 30%,
+    var(--parchment-mid) 100%
+  );
+}
+
+#slide-8 .slide-title {
+  color: var(--gold-pale);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 40px rgba(184, 134, 11, 0.3);
+}
+
+#slide-8 .content-list li {
+  color: var(--gold-pale);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-8 blockquote {
+  color: var(--ink-brown);
+  border-color: var(--gold-soft);
+}
+
+#slide-8 .fun-fact {
+  color: var(--ink-brown);
+  border-color: var(--gold-soft);
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.12), rgba(184, 134, 11, 0.04));
+}
+
+#slide-8 .context-text {
+  color: rgba(228, 216, 176, 0.7);
+}
+
+#slide-8 .slide-inner > div:first-child {
+  max-width: 80ch;
+}
+
+/* Slide 9 - Compactata */
+#slide-9 {
+  background: linear-gradient(180deg,
+    var(--parchment-light) 0%,
+    var(--parchment-mid) 60%,
+    var(--parchment-aged) 100%
+  );
+}
+
+/* Slide 10 - Death */
+#slide-10 {
+  background: linear-gradient(180deg,
+    var(--ink-black) 0%,
+    #1a1210 60%,
+    #0d0a08 100%
+  );
+}
+
+#slide-10 .slide-title {
+  color: var(--gold-pale);
+}
+
+#slide-10 p,
+#slide-10 li {
+  color: var(--parchment-mid);
+}
+
+/* Slide 11 - Legacy */
+#slide-11 {
+  background: linear-gradient(180deg,
+    var(--parchment-light) 0%,
+    var(--parchment-mid) 100%
+  );
+}
+
+#slide-11 .legacy-negative {
+  background: linear-gradient(135deg, rgba(92, 31, 31, 0.1), rgba(92, 31, 31, 0.05));
+  border-left: 3px solid var(--burgundy-mid);
+  padding: var(--space-lg);
+}
+
+#slide-11 .legacy-positive {
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(184, 134, 11, 0.05));
+  border-left: 3px solid var(--gold-rich);
+  padding: var(--space-lg);
+}
+
+#slide-11 .legacy-negative h3 {
+  color: var(--burgundy-soft);
+}
+
+#slide-11 .legacy-positive h3 {
+  color: var(--gold-rich);
+}
+
+/* Generic slide backgrounds */
+#slide-2, #slide-3 {
+  background: linear-gradient(180deg,
+    var(--parchment-light) 0%,
+    var(--parchment-mid) 100%
+  );
+}
+
+/* Parchment texture overlay for all slides */
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.6;
+}

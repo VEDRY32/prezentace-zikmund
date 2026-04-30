@@ -1,0 +1,128 @@
+/* === TYPOGRAPHY === */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  color: var(--ink-black);
+}
+
+.slide-title {
+  font-size: var(--fs-h1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.slide-subtitle {
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: var(--ink-brown);
+  margin-bottom: var(--space-lg);
+}
+
+.slide-section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--gold-rich);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  max-width: 65ch;
+  color: var(--ink-brown);
+}
+
+/* Drop cap */
+.drop-cap::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  padding-top: 0.05em;
+  color: var(--gold-rich);
+  font-weight: 700;
+}
+
+/* Quotes */
+blockquote {
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-size: var(--fs-quote);
+  color: var(--ink-faded);
+  border-left: 3px solid var(--gold-soft);
+  padding-left: var(--space-lg);
+  margin: var(--space-lg) 0;
+  position: relative;
+}
+
+blockquote .quote-source {
+  display: block;
+  font-size: var(--fs-caption);
+  font-style: normal;
+  margin-top: var(--space-sm);
+  color: var(--ink-faded);
+}
+
+/* Fun fact / did-you-know */
+.fun-fact {
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.08), rgba(184, 134, 11, 0.03));
+  border: 1px solid var(--gold-pale);
+  border-radius: 4px;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) 0;
+  font-size: var(--fs-caption);
+  position: relative;
+}
+
+.fun-fact::before {
+  content: '✦';
+  color: var(--gold-rich);
+  font-size: 1.2em;
+  margin-right: var(--space-sm);
+}
+
+/* Year numbers */
+.year {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--gold-rich);
+}
+
+/* Bullet points */
+.content-list {
+  list-style: none;
+  padding: 0;
+}
+
+.content-list li {
+  font-size: var(--fs-body);
+  color: var(--ink-brown);
+  padding: var(--space-xs) 0;
+  padding-left: var(--space-lg);
+  position: relative;
+}
+
+.content-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold-soft);
+  font-size: 0.7em;
+  top: 0.45em;
+}
+
+/* Context text */
+.context-text {
+  font-size: var(--fs-caption);
+  color: var(--ink-faded);
+  font-style: italic;
+  margin-top: var(--space-md);
+  border-top: 1px solid var(--parchment-dark);
+  padding-top: var(--space-md);
+}

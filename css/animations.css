@@ -1,0 +1,236 @@
+/* === KEYFRAME ANIMATIONS === */
+
+/* Pen writing effect */
+@keyframes penWrite {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Ink drop */
+@keyframes inkDrop {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* Gold shimmer */
+@keyframes goldShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-soft) 0%,
+    var(--gold-pale) 25%,
+    var(--gold-rich) 50%,
+    var(--gold-pale) 75%,
+    var(--gold-soft) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Parchment unroll */
+@keyframes unrollDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 2000px;
+    opacity: 1;
+  }
+}
+
+/* Candle flicker */
+@keyframes candleFlicker {
+  0%, 100% { opacity: 1; transform: scale(1) translateY(0); }
+  10% { opacity: 0.9; transform: scale(1.02) translateY(-1px); }
+  20% { opacity: 1; transform: scale(0.98) translateY(1px); }
+  30% { opacity: 0.95; transform: scale(1.01) translateY(-2px); }
+  40% { opacity: 1; transform: scale(0.99) translateY(0); }
+  50% { opacity: 0.92; transform: scale(1.03) translateY(-1px); }
+  60% { opacity: 1; transform: scale(0.97) translateY(1px); }
+  70% { opacity: 0.98; transform: scale(1.02) translateY(-1px); }
+  80% { opacity: 1; transform: scale(0.98) translateY(0); }
+  90% { opacity: 0.96; transform: scale(1.01) translateY(-2px); }
+}
+
+/* Flame glow */
+@keyframes flameGlow {
+  0%, 100% { box-shadow: 0 0 10px 2px rgba(255, 160, 40, 0.6); }
+  50% { box-shadow: 0 0 20px 5px rgba(255, 120, 20, 0.8); }
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in right */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Typewriter cursor blink */
+@keyframes cursorBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Book page turn */
+@keyframes pageTurn {
+  from {
+    transform: perspective(1200px) rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1200px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Crown descend */
+@keyframes crownDescend {
+  from {
+    transform: translateY(-100vh) rotate(10deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Fire particle */
+@keyframes fireParticle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Seal stamp */
+@keyframes sealStamp {
+  0% {
+    transform: scale(3) rotate(-20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.9) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Book close */
+@keyframes bookClose {
+  from {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(-90deg);
+    opacity: 0;
+  }
+}
+
+/* Scroll hint animation */
+@keyframes scrollHint {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.scroll-hint {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold-soft);
+  font-family: var(--font-heading);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.1em;
+  animation: scrollHint 2s ease-in-out infinite;
+  z-index: var(--z-nav);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.scroll-hint-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid var(--gold-soft);
+  border-bottom: 2px solid var(--gold-soft);
+  transform: rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide-with-image {
+    grid-template-columns: 1fr;
+  }
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  #slide-1 .title-facts {
+    flex-direction: column;
+    align-items: center;
+  }
+}
